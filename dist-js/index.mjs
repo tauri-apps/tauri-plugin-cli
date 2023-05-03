@@ -23,7 +23,7 @@ import { invoke } from '@tauri-apps/api/tauri';
  * @since 1.0.0
  */
 async function getMatches() {
-    return await invoke('plugin:cli|cli_matches');
+    return await invoke("plugin:cli|cli_matches");
 }
 
 export { getMatches };
