@@ -6,7 +6,7 @@ import { invoke } from '@tauri-apps/api/tauri';
  *
  * @example
  * ```typescript
- * import { getMatches } from 'tauri-plugin-cli-api';
+ * import { getMatches } from '@tauri-apps/plugin-cli';
  * const matches = await getMatches();
  * if (matches.subcommand?.name === 'run') {
  *   // `./your-app run $ARGS` was executed
