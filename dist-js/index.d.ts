@@ -1,4 +1,14 @@
 /**
+ * Parse arguments from your Command Line Interface.
+ *
+ * @module
+ */
+declare global {
+    interface Window {
+        __TAURI_INVOKE__: <T>(cmd: string, args?: unknown) => Promise<T>;
+    }
+}
+/**
  * @since 1.0.0
  */
 interface ArgMatch {
