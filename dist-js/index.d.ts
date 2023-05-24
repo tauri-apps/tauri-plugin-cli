@@ -9,7 +9,7 @@ declare global {
     }
 }
 /**
- * @since 1.0.0
+ * @since 2.0.0
  */
 interface ArgMatch {
     /**
@@ -24,14 +24,14 @@ interface ArgMatch {
     occurrences: number;
 }
 /**
- * @since 1.0.0
+ * @since 2.0.0
  */
 interface SubcommandMatch {
     name: string;
     matches: CliMatches;
 }
 /**
- * @since 1.0.0
+ * @since 2.0.0
  */
 interface CliMatches {
     args: Record<string, ArgMatch>;
@@ -56,7 +56,7 @@ interface CliMatches {
  * }
  * ```
  *
- * @since 1.0.0
+ * @since 2.0.0
  */
 declare function getMatches(): Promise<CliMatches>;
 export type { ArgMatch, SubcommandMatch, CliMatches };

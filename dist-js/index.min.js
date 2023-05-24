@@ -20,7 +20,7 @@
  * }
  * ```
  *
- * @since 1.0.0
+ * @since 2.0.0
  */
 async function getMatches() {
     return await window.__TAURI_INVOKE__("plugin:cli|cli_matches");
