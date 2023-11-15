@@ -1,4 +1,6 @@
-import { invoke } from '@tauri-apps/api/primitives';
+'use strict';
+
+var primitives = require('@tauri-apps/api/primitives');
 
 // Copyright 2019-2023 Tauri Programme within The Commons Conservancy
 // SPDX-License-Identifier: Apache-2.0
@@ -30,8 +32,7 @@ import { invoke } from '@tauri-apps/api/primitives';
  * @since 2.0.0
  */
 async function getMatches() {
-    return await invoke("plugin:cli|cli_matches");
+    return await primitives.invoke("plugin:cli|cli_matches");
 }
 
-export { getMatches };
-//# sourceMappingURL=index.mjs.map
+exports.getMatches = getMatches;
