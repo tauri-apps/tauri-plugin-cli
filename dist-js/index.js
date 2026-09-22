@@ -27,6 +27,7 @@ import { invoke } from '@tauri-apps/api/core';
  * }
  * ```
  *
+ * @returns A promise resolving to the parsed CLI matches.
  * @since 2.0.0
  */
 async function getMatches() {
