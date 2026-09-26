@@ -139,12 +139,12 @@ fn get_matches_internal(config: &Config, matches: &ArgMatches) -> Matches {
             .subcommands
             .as_ref()
             .and_then(|s| s.get(subcommand_name))
-        {
-            cli_matches.set_subcommand(
-                subcommand_name.to_string(),
-                get_matches_internal(subcommand_config, subcommand_matches),
-            );
-        }
+    {
+        cli_matches.set_subcommand(
+            subcommand_name.to_string(),
+            get_matches_internal(subcommand_config, subcommand_matches),
+        );
+    }
 
     cli_matches
 }
