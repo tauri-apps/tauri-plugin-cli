@@ -1,4 +1,6 @@
 /**
+ * The resolution of a single CLI argument match.
+ *
  * @since 2.0.0
  */
 interface ArgMatch {
@@ -14,17 +16,25 @@ interface ArgMatch {
     occurrences: number;
 }
 /**
+ * The result of matching a subcommand of the CLI definition.
+ *
  * @since 2.0.0
  */
 interface SubcommandMatch {
+    /** The name of the matched subcommand. */
     name: string;
+    /** The argument matches of the subcommand, resolved the same way as the parent command's matches. */
     matches: CliMatches;
 }
 /**
+ * The resolved matches of the CLI arguments and, if any, its matched subcommand.
+ *
  * @since 2.0.0
  */
 interface CliMatches {
+    /** The matched arguments, keyed by argument name. */
     args: Record<string, ArgMatch>;
+    /** The matched subcommand, or `null` if no subcommand was invoked. */
     subcommand: SubcommandMatch | null;
 }
 /**
@@ -46,6 +56,7 @@ interface CliMatches {
  * }
  * ```
  *
+ * @returns A promise resolving to the parsed CLI matches.
  * @since 2.0.0
  */
 declare function getMatches(): Promise<CliMatches>;
